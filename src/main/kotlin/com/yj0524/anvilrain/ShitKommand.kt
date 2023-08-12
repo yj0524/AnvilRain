@@ -30,7 +30,7 @@ object ShitKommand {
     private fun summonShit(player: Player) {
         val loc = player.location
 
-        if (System.currentTimeMillis() - player.uniqueId.cooltime < 60000) {
+        if (System.currentTimeMillis() - player.uniqueId.cooltime < 40000) {
             player.sendMessage(text("이 명령어는 현재 쿨타임에 있습니다.").color(TextColor.color(0xFF0000)))
         } else {
             loc.block.type = Material.ANVIL
